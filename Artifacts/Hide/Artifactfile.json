@@ -1,15 +1,22 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
-  "title": "Hide a folder",
-  "description": "Hiding a folder to restrict unauthorized access",
-  "tags": [
-    "Windows",
-    "Script",
-    "Hide"
-  ],
-  "iconUri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoILwiLt3rZZpaZ-zM4k-1j8fby9w0F-2yxY_42befpvY1biaK",
-  "targetOsType": "Windows",
-  "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./Hide.ps1 -PackageList ', 'Hiding a folder', '\"')]"
-  }
+    "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+    "title": "Hiding a folder",
+    "publisher": "S",
+    "description": "To hide a folder and restrict access",
+    "tags": [
+        "Windows",
+        "Hide"
+    ],
+    "iconUri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoILwiLt3rZZpaZ-zM4k-1j8fby9w0F-2yxY_42befpvY1biaK",
+    "targetOsType": "Windows",
+    "parameters": {
+        "packages": {
+            "type": "string",
+            "displayName": "Packages",
+            "description": "Comma delimited list of package names to be installed, for example: 7Zip,Fiddler4. A complete list of public packages can be found at https://chocolatey.org/packages."
+        }
+    },
+    "runCommand": {
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./hide.ps1 -PackageList ''', parameters('packages'), '''\"')]"
+    }
 }
