@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+  "title": "Hide a folder",
+  "description": "Hiding a folder to restrict unauthorized access",
+  "tags": [
+    "Windows",
+    "Script",
+    "Hide"
+  ],
+  "iconUri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoILwiLt3rZZpaZ-zM4k-1j8fby9w0F-2yxY_42befpvY1biaK",
+  "targetOsType": "Windows",
+  "runCommand": {
+    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./startChocolatey.ps1 -PackageList ', 'googlechrome', '\"')]"
+  }
+}
