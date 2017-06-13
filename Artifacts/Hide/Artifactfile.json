@@ -10,6 +10,6 @@
   "iconUri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoILwiLt3rZZpaZ-zM4k-1j8fby9w0F-2yxY_42befpvY1biaK",
   "targetOsType": "Windows",
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./startChocolatey.ps1 -PackageList ', 'googlechrome', '\"')]"
+    "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./Hide.ps1 -PackageList ', 'Hiding a folder', '\"')]"
   }
 }
